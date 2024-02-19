@@ -1,0 +1,4 @@
+{
+  "kits": ["@paulkinlan/claude-breadboard-kit"],
+  "proxy": ["generateCompletion"]
+}

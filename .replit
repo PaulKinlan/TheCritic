@@ -1,0 +1,22 @@
+compile = ["npm", "run", "build"]
+run = ["npm", "run", "server"]
+
+entrypoint = "server-src/index.ts"
+modules = ["nodejs-20:v12-20231130-57acee0"]
+hidden = [".config", "package-lock.json", "tsconfig.json"]
+
+[gitHubImport]
+requiredFiles = [".replit", "replit.nix", ".config"]
+
+[nix]
+channel = "stable-23_05"
+
+[deployment]
+run = ["sh", "-c", "npm run server"]
+deploymentTarget = "cloudrun"
+ignorePorts = false
+build = ["sh", "-c", "npm run build"]
+
+[[ports]]
+localPort = 8080
+externalPort = 80

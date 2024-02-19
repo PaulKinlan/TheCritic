@@ -1,0 +1,31 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "The Critic web App",
+  "main": "index.ts",
+  "files": [
+    "dist/index.js"
+  ],
+  "exports": {
+    "./server": "./server-src/dist/index.js"
+  },
+  "type": "module",
+  "author": "Paul Kinlan",
+  "license": "ISC",
+  "dependencies": {
+    "@google-labs/breadboard": "^0.10.1",
+    "@google-labs/core-kit": "^0.2.2",
+    "@google-labs/template-kit": "^0.1.4",
+    "@paulkinlan/claude-breadboard-kit": "^3.0.0",
+    "comlink": "^4.4.1",
+    "dompurify": "^3.0.8",
+    "marked": "^12.0.0",
+    "node-fetch": "^3.3.1",
+    "serve-handler": "^6.1.5"
+  },
+  "devDependencies": {
+    "@types/node": "^20.4.1",
+    "@types/serve-handler": "^6.1.4",
+    "typescript": "^5.3.3"
+  }
+}
